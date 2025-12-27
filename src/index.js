@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Users from './pages/Users/Users';
 import Home from './pages/Home/Home';
+import NotFound from './pages/NotFound/NotFound';
 
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/users',
     element: <Users/>
+  },
+  {
+    path: '*',
+    element: <NotFound/>
   }
 ]);
 
