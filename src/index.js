@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Users from './pages/Users/Users';
 import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
@@ -15,11 +16,13 @@ const router = createBrowserRouter([
   },
   {
     path: '/users',
-    element: <Users/>
+    element: <Users/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: '*',
-    element: <NotFound/>
+    element: <NotFound/>,
+    errorElement: <ErrorPage/>
   }
 ]);
 
